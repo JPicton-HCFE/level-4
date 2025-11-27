@@ -10,6 +10,25 @@ html {
   font-family: "Geist", sans-serif;
 }
 
+/* Header Styling */
+menu {
+  display: flex;
+}
+
+/* Body Styling */
+body {
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: underline;
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -18,3 +37,16 @@ h2 {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-size: 2.25rem;
+}
+
+/* Class Selectors */
+.info-start {
+  font-size: 1.2rem;
+  font-style: italic;
+  background-color: #1f1d1d;
+  margin: 0.3rem 0.3rem 0.3rem 0;
+  padding: 0.2rem;
+  border-radius: 1rem;
+}
