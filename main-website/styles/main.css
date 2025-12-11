@@ -1,6 +1,10 @@
 :root {
   --night: #0C090A;
+  --charcoal-blue: #060722;
   --white-wisp: #E9E9E4;
+  --cyber-blue: #00aeff;
+  --dull-blue: #000f5c;
+  --deep-ocean: #020021;
 }
 
 html {
@@ -11,12 +15,34 @@ html {
 }
 
 /* Header Styling */
-menu {
+nav {
+  background-color: var(--deep-ocean);
+  padding: 1rem 0;
+  border-bottom: 3px var(--cyber-blue) solid;
+}
+
+nav>ul {
   display: flex;
+  font-size: 24px;
+}
+
+.nav-link {
+  font-size: 24px;
+  padding: 0.1rem 0.3rem;
+  margin: 0.1rem;
+  transition: all ease-in-out 300ms;
+  border: solid 1px var(--dull-blue);
+}
+
+.nav-link:hover {
+  color: var(--cyber-blue);
+  border-radius: 1rem;
+  background: var(--charcoal-blue);
+  font-weight: bold;
 }
 
 /* Body Styling */
-body {
+main {
   padding: 1rem;
 }
 
@@ -29,8 +55,17 @@ h6 {
   text-decoration: underline;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: italic;
+}
+
 h1 {
   font-size: 3rem;
+  text-align: center;
 }
 
 h2 {
@@ -41,6 +76,18 @@ h3 {
   font-size: 2.25rem;
 }
 
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.75rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
 /* Class Selectors */
 .info-start {
   font-size: 1.2rem;
@@ -49,4 +96,71 @@ h3 {
   margin: 0.3rem 0.3rem 0.3rem 0;
   padding: 0.2rem;
   border-radius: 1rem;
+}
+
+/* Modal Styling */
+.legis-btn {
+  display: block;
+  padding: 0.3rem;
+  margin-top: 0.3rem;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  background-color: var(--deep-ocean);
+  color: var(--white-wisp);
+  border: var(--dull-blue) 2px solid;
+  transition: all ease-in-out 200ms;
+}
+
+.legis-btn:hover {
+  color: var(--cyber-blue);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #000000;
+  margin: 5% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #8b0000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
 }
