@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Networking</title>
+</head>
+
+<body>
+  <header>
+    <h1>Networking</h1>
+  </header>
+  <main>
+    <span class="comment">The below needs looking into and adding onto. Also talk about the Next Generation Firewall and
+      Traditional.</span>
+    Combines traditonal firewall functions with advacned security features. Intrusion, prevetntion, application
+    awareness, and threat intelligence.
+    NGFWs inspect networking traffic at layer 7 of OSI. It has it's overheads (cons) like costs and time (processing).
+    <ul>
+      <li>Application Awareness and Control</li>
+      <li>Integrated Intrusion Prevention System (IPS)</li>
+      <li>Deep Packet Inspection (DPI)</li>
+      <li>Threat Intelligence</li>
+      <li>Indetity Awareness</li>
+    </ul>
+    Traditional vs NGFWs
+    Traditional primarly focus on basic network security by filtering traffic based on IP addresses and port numbers att
+    the transport layer (layer 4).
+    <section>
+      <span class="comment">Expand on the below.</span>
+      <ul>
+        <li>Enchanced Protection</li>
+        <li>Granular (Percise) Control</li>
+        <li>Improved Security Policies</li>
+        <li>Simplified Security</li>
+      </ul>
+    </section>
+    <section>
+      Network Issues and Common Problems
+      Congestion - Causes, Symptoms (One could be TTL (Time To Live)), Mitigation (putting it right, like upgrading
+      bandwith etc.).
+      <section>
+        Hardware Failure
+        Failures in things like routers, switches, cables, power supplies, NIC, connectors, sotrage devices.
+        <ul>
+          <li>Symptoms</li>
+          <li>Prevention - example of redundancy in this case would be to have more than one to make sure it still
+            happens.</li>
+          <li>Hardware</li>
+        </ul>
+      </section>
+      <section>
+        Software Bugs
+        Flaws in firmware (software that is actually built into the device (look into this myself when it comes to
+        things like Linux updating it via the console when running sudo apt-get update and sudo apt-get upgrade, we did and it updates stuff ontop of )) OS
+        updates, or configuration, memory leaks, software crashes, attackers on vulner
+        <ul>
+          <li>Symptoms - Instability, Feature Failures, CPU/Memory spikes and leaks, Rebbot Loops</li>
+          <li>Mitigation</li>
+        </ul>
+      </section>
+      <section>
+        Physical Infrastructure Damage
+        Causes: construction cuts, weather, rodents, wear and tear, water influx
+        <ul>
+          <li>Symptoms</li>
+          <li>Prevention</li>
+        </ul>
+      </section>
+      <section>
+        Summary
+        Network issues stem from congestion, hardware, software, or phyiscal damage.
+        Effective migitation requires monitoring redundancy good design and regular maintencance.
+      </section>
+      <section>
+        Forward vs Reverse Proxy
+        <section>
+          Forward (outward traffic) Proxy (server) A forward proxy sits in front of clients and acts as an intermediart
+          between a user and the internet.
+          <section>
+            Privacy / Anonymity: Masks the clients IP address.
+            Access Control: Enforce policies (e.g. blocking sites)
+            Caching: Stores frequently accessed content to reduce bandwidth later on.
+            Security: Can scan outbound traffic for threats.
+            <section>
+              Example use cases:
+              Employees web traffic passes through a corporate proxy.
+              A user hides their location by using an anonymising proxy or VPN like service.
+              Schools restricting access to certain websites.
+              Key Idea - A forward proxy represents a client
+            </section>
+          </section>
+        </section>
+      </section>
+      <section>
+        Reverse proxy sits in front of servers, actung as a gateway for incoming requests form the internet, this works
+        by Internet to Reverse Proxy to Backend Servers.
+        <section>
+          Primary Purposes
+          Load Balancing: Distributes requests across multiple servers.
+          Secuirty: Hide internal server details blocks malicious traffic.
+          SSL (Secure Sockets Layer) Termination: Offloads
+        </section>
+        <section>
+          Examples
+          Cloud platforms using reverse proxies to balance global traffic.
+          Websites using NGINX/HAProxy as the entry point to backend applications.
+          CDNs acting as reverse proxies close to users.
+          Key Idea: A reverse proxy represents the server.
+          <span class="comment">Look into NGINX/HAProxy and CDN.</span>
+        </section>
+      </section>
+      <section>
+        Redundancy
+        Means adding extra information (bits), extra paths, extra components.
+        <section>
+          Data Redundancy (Error Detection & Correction)
+          Additional bit (parity bits, checksums, cyclic redundancy c, error correction codes) are added to transmitted
+          data. (Flipped bits?)
+          These extra bits allow the receiver to detect and sometimes correct errors without needing a retramission.
+          Used in memory systems, storage, and some realtime communication where retramission is too slow or impossible.
+          Talk about TCP, UDP, FEC (Forward error correction).
+          <section>
+            Path or Link Redundancy
+            multiple links or routes between devices.
+            If one path failes traffic automatically rerouted.
+            Used in enterprise networks, data centers, and routing protocols OSPF, BGP, STP, VRRP, RIP.
+          </section>
+          <section>
+            Hardware Redundancy
+            Duplicate hardware components eg. dual power supplies, backup switches.
+            Prevents single points to failure.
+          </section>
+          <section>
+            Benefits
+            Reduces down time.
+            Improves reliability and fault tolerence.
+            Allows error correction without
+          </section>
+          <span class="comment">
+            If I have time look into Hamming codes.
+          </span>
+          <section>
+            Automatic retramissions
+            Definition: Automatic retramission aka automatic repeat request or arq is a method where the receiver
+            detects an error and requests the sender to resent the corrupted.
+            <section>
+              How it works
+              Sender transmits data frames/packets.
+              receiver checks the data usering error detection codes example crc.
+              If an error is found, the receiver discards the frame and sends a negative acknowledgement NACK or simply stays silent.
+              The sender retransmits the data.
+            </section>
+            <section>
+              Common ARQ methods
+              - Stop and Wait ARQ
+              - Go Back N ARQ (N represents a number, similar to how coding uses X. So it means go back N frames)
+              - Selective Repeat ARQ
+              <section>
+                Where ARQ is used
+                - Transport layer protocols like TCP.
+                - Wireless communication protocols.
+                - Many reliable machine to machine communication systems
+              </section>
+              <section>
+                Benefits of ARQ
+                - Ensures high reliabilityin noisy or unpredictable networks
+                - Straightforward and robust
+                - Works without needing complex error-correcting codes
+              </section>
+            </section>
+          </section>
+        </section>
+        <section>
+          Summary
+          - Redundancy adds extra data or alrernative Infrastructure to allow networks to detect, tolerate, or correct errors without needing to retransmit.
+          - Automatic retramissions (ARQ) provide reliability by having the sender resend corrupted or missing data based on feedback from the receiver.
+          - Both approaches are often used together to achieve end to end error control in modern networks.
+        </section>
+      </section>
+      <section>
+        Parity check
+        <p>
+          Simple error detection method using one extra partiy bit. Can only sometimes detect the error.
+          - Even parity: total number of 1s should be even.
+          - Odd parity: total number of 1s should be odd.
+          - Detects single bit error but cannot correct them.
+        </p>
+        <p>
+          How it works
+          Sender calculates parity bit from data bits
+          - receiver recalculates parity and compares
+          - Mismatch signals an error occurred
+          - Cannot reliably detect multi-bit errors
+        </p>
+      </section>
+      <section>
+        CRC cyclic redundancy check
+        <p>
+          Stronger detection using polynomial division
+          - Produces a checksum (look into what a checksum is) appended to data
+          - Detects burst errors (multiple bit errors in clusters) more effectively than parity
+          - Used in Ethernet, storage. compression formats
+        </p>
+      </section>
+      <section>
+        ECC (Error-Correcting Code)
+        <p>
+          advacned technique enabling correction of errors, unlike the other two this one might not even tell you about the error but might correct it anyway.
+          - Adds mutliple redundant bits (Hamming, Reed-Solomon)
+          - Used in ECC RAM, storage systems, telecoms
+          - Can correct single or multiple bit errors depending on code
+        </p>
+      </section>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
