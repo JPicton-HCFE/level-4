@@ -5,6 +5,7 @@
   --cyber-blue: #00aeff;
   --dull-blue: #000f5c;
   --deep-ocean: #020021;
+  --charcoal: #1b1b1b;
 }
 
 html {
@@ -15,35 +16,23 @@ html {
 }
 
 /* Header Styling */
-nav {
+header {
   background-color: var(--deep-ocean);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
   border-bottom: 3px var(--cyber-blue) solid;
-}
-
-nav>ul {
   display: flex;
-  font-size: 24px;
+  justify-content: space-evenly;
 }
 
-.nav-link {
-  font-size: 24px;
-  padding: 0.1rem 0.3rem;
-  margin: 0.1rem;
-  transition: all ease-in-out 300ms;
-  border: solid 1px var(--dull-blue);
-}
-
-.nav-link:hover {
-  color: var(--cyber-blue);
-  border-radius: 1rem;
-  background: var(--charcoal-blue);
-  font-weight: bold;
+.h-item {
+  font-size: 2rem;
 }
 
 /* Body Styling */
 main {
-  padding: 1rem;
+  margin: 0.5rem;
+  /* background-color: var(--charcoal); */
 }
 
 h1,
@@ -53,6 +42,8 @@ h4,
 h5,
 h6 {
   text-decoration: underline;
+  margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 h2,
@@ -65,7 +56,6 @@ h6 {
 
 h1 {
   font-size: 3rem;
-  text-align: center;
 }
 
 h2 {
@@ -88,7 +78,22 @@ h6 {
   font-size: 1.5rem;
 }
 
+section {
+  padding: 0.5rem;
+}
+
 /* Class Selectors */
+.comment {
+  padding: 10px;
+  background-color: var(--cyber-blue);
+}
+
+.main-link {
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .info-start {
   font-size: 1.2rem;
   font-style: italic;
