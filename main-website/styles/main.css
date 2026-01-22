@@ -3,6 +3,7 @@
   --charcoal-blue: #060722;
   --white-wisp: #E9E9E4;
   --cyber-blue: #00aeff;
+  --header-blue: #6293d8;
   --dull-blue: #000f5c;
   --deep-ocean: #020021;
   --charcoal: #1b1b1b;
@@ -44,6 +45,7 @@ h6 {
   text-decoration: underline;
   margin-bottom: 0.25rem;
   text-align: center;
+  color: var(--header-blue);
 }
 
 h2,
