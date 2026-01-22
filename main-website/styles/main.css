@@ -93,6 +93,15 @@ a:hover {
   text-decoration: underline;
 }
 
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--deep-ocean);
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  border-top: 3px var(--cyber-blue) solid;
+}
+
 /* Class Selectors */
 .comment {
   padding: 10px;
