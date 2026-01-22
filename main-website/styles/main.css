@@ -84,6 +84,15 @@ section {
   padding: 0.5rem;
 }
 
+a {
+  transition: all ease-in-out 250ms;
+}
+
+a:hover {
+  color: var(--cyber-blue);
+  text-decoration: underline;
+}
+
 /* Class Selectors */
 .comment {
   padding: 10px;
