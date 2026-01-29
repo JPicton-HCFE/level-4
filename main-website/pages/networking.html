@@ -53,7 +53,8 @@
       <section>
         Software Bugs
         Flaws in firmware (software that is actually built into the device (look into this myself when it comes to
-        things like Linux updating it via the console when running sudo apt-get update and sudo apt-get upgrade, we did and it updates stuff ontop of )) OS
+        things like Linux updating it via the console when running sudo apt-get update and sudo apt-get upgrade, we did
+        and it updates stuff ontop of )) OS
         updates, or configuration, memory leaks, software crashes, attackers on vulner
         <ul>
           <li>Symptoms - Instability, Feature Failures, CPU/Memory spikes and leaks, Rebbot Loops</li>
@@ -149,11 +150,12 @@
               How it works
               Sender transmits data frames/packets.
               receiver checks the data usering error detection codes example crc.
-              If an error is found, the receiver discards the frame and sends a negative acknowledgement NACK or simply stays silent.
+              If an error is found, the receiver discards the frame and sends a negative acknowledgement NACK or simply
+              stays silent.
               The sender retransmits the data.
             </section>
             <section>
-              Common ARQ methods
+              Common ARQ (Automatic Repeat Request) methods
               - Stop and Wait ARQ
               - Go Back N ARQ (N represents a number, similar to how coding uses X. So it means go back N frames)
               - Selective Repeat ARQ
@@ -174,8 +176,10 @@
         </section>
         <section>
           Summary
-          - Redundancy adds extra data or alrernative Infrastructure to allow networks to detect, tolerate, or correct errors without needing to retransmit.
-          - Automatic retramissions (ARQ) provide reliability by having the sender resend corrupted or missing data based on feedback from the receiver.
+          - Redundancy adds extra data or alrernative Infrastructure to allow networks to detect, tolerate, or correct
+          errors without needing to retransmit.
+          - Automatic retramissions (ARQ) provide reliability by having the sender resend corrupted or missing data
+          based on feedback from the receiver.
           - Both approaches are often used together to achieve end to end error control in modern networks.
         </section>
       </section>
@@ -207,11 +211,47 @@
       <section>
         ECC (Error-Correcting Code)
         <p>
-          advacned technique enabling correction of errors, unlike the other two this one might not even tell you about the error but might correct it anyway.
+          advacned technique enabling correction of errors, unlike the other two this one might not even tell you about
+          the error but might correct it anyway.
           - Adds mutliple redundant bits (Hamming, Reed-Solomon)
           - Used in ECC RAM, storage systems, telecoms
           - Can correct single or multiple bit errors depending on code
         </p>
+      </section>
+      <section>
+        Connectors and cables
+        Coaxial
+        Twisted Pair
+        Optical Fibre
+
+        Parallel Cable - Very short Distance, because of cross talk. Like being used within the actual unit of a
+        machine, can send up to 8 bits of data or all data at once.
+        Serial Cable - Long Distance, because of no cross talk, mainly used in all things outside of the machine,
+        increments the data, for instance sends one bit of data and then the next and then the next etc.
+
+        (Talk about the different versions of Cat cables here and category 3 cable standards)
+
+        RJ45 - (Registered Jacket), this is the standard physical connector for network cables. These are the most
+        commonly used seen with ethernet cables and networks.
+
+        TERA connectors allow for splitting (add more)
+
+        Thin Coaxial and BNC (Bayonet Neill-Concelman) - a modern sends data over the cable television structure by
+        taking advantage of unused bandwidth on the network, this uses coaxial cable.
+
+        Thick Coxial (Thick-net) - 10BASE5 was the first commercially available variant of Ethernet, used thick and
+        stiff coaxial cable up to 500 metres (1600ft) long. Up to 100 nodes can be connected to the cable using vampire
+        taps.
+
+        Twisted Pair - Form of wiring in pairs of wires (the forward and return conductors of a single circuit) are
+        twitsted together for the purposes of cancelling out electromagnetic interference (EMI).
+        Sheilded and Unshielded (talk about these).
+
+        It is the difference in voltage of the two wires that is important, having the twisted pairs help with an issue
+        that can occur when sometimes having voltage run down these cables a wire can then carry around 2 volts when
+        it's supposed to have 1vot or none for example and having these wires twisted instead of straight, they both
+        help each other by helping regulate the different in voltage between the pairs. This basically helps minimise or
+        eradicate this issue.
       </section>
     </section>
   </main>
