@@ -80,6 +80,10 @@ h6 {
   font-size: 1.5rem;
 }
 
+main {
+  min-height: 90vh;
+}
+
 section {
   padding: 0.5rem;
 }
