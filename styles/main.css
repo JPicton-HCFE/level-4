@@ -88,6 +88,10 @@ section {
   padding: 0.5rem;
 }
 
+p {
+  margin: 0.5rem auto;
+}
+
 a {
   transition: all ease-in-out 250ms;
 }
