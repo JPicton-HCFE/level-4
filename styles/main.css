@@ -152,6 +152,10 @@ footer {
   align-items: center;
 }
 
+.news-item img {
+  max-width: 300px;
+}
+
 /* Modal Styling */
 .legis-btn {
   display: block;
