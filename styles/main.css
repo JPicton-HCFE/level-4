@@ -138,6 +138,10 @@ footer {
   border-radius: 1rem;
 }
 
+#news {
+  display: flex;
+}
+
 /* Modal Styling */
 .legis-btn {
   display: block;
