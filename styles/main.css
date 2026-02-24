@@ -156,6 +156,16 @@ footer {
   max-width: 300px;
 }
 
+.tag {
+  box-sizing: border-box;
+  border-radius: 1rem;
+  padding: 0.2rem;
+}
+
+.important {
+  background-color: #8b0000;
+}
+
 /* Modal Styling */
 .legis-btn {
   display: block;
