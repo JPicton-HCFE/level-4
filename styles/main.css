@@ -126,6 +126,7 @@ footer {
   padding: 5px;
   font-size: 20px;
   font-weight: 700;
+  flex: auto;
 }
 
 .info-start {
