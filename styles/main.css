@@ -157,6 +157,10 @@ footer {
   max-width: 300px;
 }
 
+.news-item:hover {
+  transform: scale(1.125);
+}
+
 .tag {
   box-sizing: border-box;
   border-radius: 1rem;
