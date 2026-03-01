@@ -150,6 +150,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all ease-in-out 250ms;
 }
 
 .news-item img {
